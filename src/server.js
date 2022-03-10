@@ -91,7 +91,7 @@ app.post('/api', async (req, res) => {
       }
     }
     catch (e) {
-      res.send(e.response.data.messages);
+      res.send(e);
     }
   }
 })
