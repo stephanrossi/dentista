@@ -1,0 +1,25 @@
+{{>partials/header}}
+
+<br>
+<form action="/" method="post">
+    <span>Digite o CPF a ser consultado:</span>
+    <input type="text" name="cpf" id="cpf" required>
+    <input type="submit" value="Consultar">
+</form>
+<br>
+<br>
+
+{{#employeeFound}}
+<h3>Funcionário registrado</h3>
+{{/employeeFound}}
+
+{{#employeeNotFound}}
+<h3>Registro não encontrado</h3>
+{{/employeeNotFound}}
+
+{{#invalidCPF}}
+<h3>CPF inválido</h3>
+{{/invalidCPF}}
+
+
+{{>partials/footer}}
